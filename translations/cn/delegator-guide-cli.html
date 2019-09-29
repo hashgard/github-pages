@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>委托人指南 (CLI) | Hashgard 文档中心</title>
+    <meta name="description" content="Hashgard - 新一代数字金融公有链">
+    <link rel="icon" href="/github-pages/favicon.ico">
+    
+    <link rel="preload" href="/github-pages/assets/css/0.styles.b9164be3.css" as="style"><link rel="preload" href="/github-pages/assets/js/app.bf5dd73f.js" as="script"><link rel="preload" href="/github-pages/assets/js/24.2dfe9c4e.js" as="script"><link rel="prefetch" href="/github-pages/assets/js/10.66d8a0a0.js"><link rel="prefetch" href="/github-pages/assets/js/11.8393ad55.js"><link rel="prefetch" href="/github-pages/assets/js/12.2ccfd939.js"><link rel="prefetch" href="/github-pages/assets/js/13.a1e900b1.js"><link rel="prefetch" href="/github-pages/assets/js/14.5371c486.js"><link rel="prefetch" href="/github-pages/assets/js/15.a9ccdc54.js"><link rel="prefetch" href="/github-pages/assets/js/16.3e94299c.js"><link rel="prefetch" href="/github-pages/assets/js/17.ede0b19c.js"><link rel="prefetch" href="/github-pages/assets/js/18.3af42029.js"><link rel="prefetch" href="/github-pages/assets/js/19.a2d187e3.js"><link rel="prefetch" href="/github-pages/assets/js/2.142e358d.js"><link rel="prefetch" href="/github-pages/assets/js/20.b8d36e32.js"><link rel="prefetch" href="/github-pages/assets/js/21.205c43c0.js"><link rel="prefetch" href="/github-pages/assets/js/22.286073fa.js"><link rel="prefetch" href="/github-pages/assets/js/23.efc1cb0e.js"><link rel="prefetch" href="/github-pages/assets/js/25.d087c3a9.js"><link rel="prefetch" href="/github-pages/assets/js/26.41d9e0bc.js"><link rel="prefetch" href="/github-pages/assets/js/27.3cf1115d.js"><link rel="prefetch" href="/github-pages/assets/js/28.79a6a4bc.js"><link rel="prefetch" href="/github-pages/assets/js/29.bd1647a7.js"><link rel="prefetch" href="/github-pages/assets/js/3.89cb87cc.js"><link rel="prefetch" href="/github-pages/assets/js/30.6ac3d706.js"><link rel="prefetch" href="/github-pages/assets/js/31.02ff2623.js"><link rel="prefetch" href="/github-pages/assets/js/32.fb021007.js"><link rel="prefetch" href="/github-pages/assets/js/33.667cd9de.js"><link rel="prefetch" href="/github-pages/assets/js/34.a48306a7.js"><link rel="prefetch" href="/github-pages/assets/js/35.851f6478.js"><link rel="prefetch" href="/github-pages/assets/js/36.74cda06d.js"><link rel="prefetch" href="/github-pages/assets/js/37.ea2a4a80.js"><link rel="prefetch" href="/github-pages/assets/js/38.c5aa82e0.js"><link rel="prefetch" href="/github-pages/assets/js/39.88839b3f.js"><link rel="prefetch" href="/github-pages/assets/js/4.46e45bad.js"><link rel="prefetch" href="/github-pages/assets/js/40.c7efa84e.js"><link rel="prefetch" href="/github-pages/assets/js/41.e6bd18b4.js"><link rel="prefetch" href="/github-pages/assets/js/42.1b3526ab.js"><link rel="prefetch" href="/github-pages/assets/js/43.bdff1f53.js"><link rel="prefetch" href="/github-pages/assets/js/44.c49a7c9a.js"><link rel="prefetch" href="/github-pages/assets/js/45.107ae8d1.js"><link rel="prefetch" href="/github-pages/assets/js/46.9f6183cf.js"><link rel="prefetch" href="/github-pages/assets/js/47.2662ebc5.js"><link rel="prefetch" href="/github-pages/assets/js/48.24949fb1.js"><link rel="prefetch" href="/github-pages/assets/js/49.90dc2b11.js"><link rel="prefetch" href="/github-pages/assets/js/5.1c9843c5.js"><link rel="prefetch" href="/github-pages/assets/js/50.2922ec7c.js"><link rel="prefetch" href="/github-pages/assets/js/51.dbff27f4.js"><link rel="prefetch" href="/github-pages/assets/js/52.c10ce7e1.js"><link rel="prefetch" href="/github-pages/assets/js/53.d08b6929.js"><link rel="prefetch" href="/github-pages/assets/js/54.201ebb77.js"><link rel="prefetch" href="/github-pages/assets/js/55.a9ff3e03.js"><link rel="prefetch" href="/github-pages/assets/js/56.75632402.js"><link rel="prefetch" href="/github-pages/assets/js/57.24c019ec.js"><link rel="prefetch" href="/github-pages/assets/js/58.74fd37d5.js"><link rel="prefetch" href="/github-pages/assets/js/59.306e59ce.js"><link rel="prefetch" href="/github-pages/assets/js/6.91a869c6.js"><link rel="prefetch" href="/github-pages/assets/js/7.9242222d.js"><link rel="prefetch" href="/github-pages/assets/js/8.49613224.js"><link rel="prefetch" href="/github-pages/assets/js/9.f4880d52.js">
+    <link rel="stylesheet" href="/github-pages/assets/css/0.styles.b9164be3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/github-pages/" class="home-link router-link-active"><!----> <span class="site-name">Hashgard 文档中心</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/github-pages/translations/cn/what-is-hashgard.html" class="nav-link">教程</a></div><div class="nav-item"><a href="/github-pages/translations/cn/hashgardcli.html" class="nav-link">命令</a></div> <a href="https://github.com/hashgard/github-pages" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/github-pages/translations/cn/what-is-hashgard.html" class="nav-link">教程</a></div><div class="nav-item"><a href="/github-pages/translations/cn/hashgardcli.html" class="nav-link">命令</a></div> <a href="https://github.com/hashgard/github-pages" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>总览</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>教程</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/github-pages/translations/cn/installation.html" class="sidebar-link">安装hashgard</a></li><li><a href="/github-pages/translations/cn/join-testnet.html" class="sidebar-link">加入测试网</a></li><li><a href="/github-pages/translations/cn/deploy-testnet.html" class="sidebar-link">部署自己的测试网</a></li><li><a href="/github-pages/translations/cn/validators/overview.html" class="sidebar-link">验证人节点指南</a></li><li><a href="/github-pages/translations/cn/delegator-guide-cli.html" class="active sidebar-link">委托人指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#目录" class="sidebar-link">目录</a></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#安装-hashgardcli" class="sidebar-link">安装 hashgardcli</a></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#hashgard账户" class="sidebar-link">Hashgard账户</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#创建一个账户" class="sidebar-link">创建一个账户</a></li></ul></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#访问hashgard网络" class="sidebar-link">访问Hashgard网络</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#运行您自己的全节点" class="sidebar-link">运行您自己的全节点</a></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#连接到一个远程全节点" class="sidebar-link">连接到一个远程全节点</a></li></ul></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#设置-hashgardcli" class="sidebar-link">设置 hashgardcli</a></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#状态查询" class="sidebar-link">状态查询</a></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#发起交易" class="sidebar-link">发起交易</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#关于gas费和手续费" class="sidebar-link">关于gas费和手续费</a></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#抵押atom通证-提取奖励" class="sidebar-link">抵押Atom通证 &amp; 提取奖励</a></li></ul></li><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#参与链上治理" class="sidebar-link">参与链上治理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/github-pages/translations/cn/delegator-guide-cli.html#从一台离线电脑上签署交易" class="sidebar-link">从一台离线电脑上签署交易</a></li></ul></li></ul></li><li><a href="/github-pages/translations/cn/hashgardcli.html" class="sidebar-link">Hasghard CLI 命令</a></li><li><a href="/github-pages/translations/cn/smart-contract-opcode.html" class="sidebar-link">Hasghard 虚拟机</a></li><li><a href="/github-pages/translations/cn/genesis.html" class="sidebar-link">创世文件</a></li><li><a href="/github-pages/translations/cn/genesis-state.html" class="sidebar-link">创世状态</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="委托人指南-cli"><a href="#委托人指南-cli" aria-hidden="true" class="header-anchor">#</a> 委托人指南 (CLI)</h1> <p>本文介绍了如何使用 Hashgard 的命令行交互（CLI）程序实现通证委托的相关知识和操作步骤。</p> <p>同时，本文也介绍了如何管理账户，如何从筹款人那里恢复账户，以及如何使用一个硬件钱包的相关知识。</p> <blockquote><p>风险提示</p> <p><strong>重要提示</strong>：请务必按照下面的操作步骤谨慎操作，过程中发生任何错误都有可能导致您永远失去所拥有的通证。
+因此，请在开始操作之前先仔细阅读全文，如果有任何问题可以联系我们获得支持。</p> <p>请务必谨慎行事！</p></blockquote> <h2 id="目录"><a href="#目录" aria-hidden="true" class="header-anchor">#</a> 目录</h2> <ul><li><a href="#%E5%AE%89%E8%A3%85-hashgardcli">安装 <code>hashgardcli</code></a></li> <li><a href="#Hashgard%E8%B4%A6%E6%88%B7">Hashgard 账户</a> <ul><li><a href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%B4%A6%E6%88%B7">创建一个账户</a></li></ul></li> <li><a href="#%E8%AE%BF%E9%97%AEHashgard%E7%BD%91%E7%BB%9C">访问 Hashgard 网络</a> <ul><li><a href="#%E8%BF%90%E8%A1%8C%E6%82%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%A8%E8%8A%82%E7%82%B9">运行您自己的全节点</a></li> <li><a href="#%E8%BF%9E%E6%8E%A5%E5%88%B0%E4%B8%80%E4%B8%AA%E8%BF%9C%E7%A8%8B%E5%85%A8%E8%8A%82%E7%82%B9">连接到一个远程全节点</a></li></ul></li> <li><a href="#%E8%AE%BE%E7%BD%AE-hashgardcli">设置<code>hashgardcli</code></a></li> <li><a href="#%E7%8A%B6%E6%80%81%E6%9F%A5%E8%AF%A2">状态查询</a></li> <li><a href="#%E5%8F%91%E8%B5%B7%E4%BA%A4%E6%98%93">发起交易</a> <ul><li><a href="#%E5%85%B3%E4%BA%8Egas%E8%B4%B9%E5%92%8C%E6%89%8B%E7%BB%AD%E8%B4%B9">关于gas费和手续费</a></li> <li><a href="#%E6%8A%B5%E6%8A%BCGARD%E9%80%9A%E8%AF%81--%E6%8F%90%E5%8F%96%E5%A5%96%E5%8A%B1">抵押 GARD 通证 &amp; 提取奖励</a></li> <li><a href="#%E5%8F%82%E4%B8%8E%E9%93%BE%E4%B8%8A%E6%B2%BB%E7%90%86">参与链上治理</a></li> <li><a href="#%E4%BB%8E%E4%B8%80%E5%8F%B0%E7%A6%BB%E7%BA%BF%E7%94%B5%E8%84%91%E4%B8%8A%E7%AD%BE%E7%BD%B2%E4%BA%A4%E6%98%93">从一台离线电脑上签署交易</a></li></ul></li></ul> <h2 id="安装-hashgardcli"><a href="#安装-hashgardcli" aria-hidden="true" class="header-anchor">#</a> 安装 <code>hashgardcli</code></h2> <p><code>hashgardcli</code>: 与<code>hashgard</code>全节点交互的命令行用户界面。</p> <blockquote><p>安全提示</p> <p><strong>请检查并且确认你下载的<code>hashgardcli</code>是可获得的最新稳定版本</strong></p></blockquote> <p>[<strong>下载已编译代码</strong>]暂不提供</p> <p><a href="/github-pages/translations/cn/installation.html"><strong>安装 Hashgard</strong></a></p> <div class="tip custom-block"><p class="custom-block-title">提示</p> <p><code>hashgardcli</code> 需要通过操作系统的终端窗口使用，打开步骤如下所示：</p> <ul><li><strong>Windows</strong>: <code>开始</code> &gt; <code>所有程序</code> &gt; <code>附件</code> &gt; <code>终端</code></li> <li><strong>MacOS</strong>: <code>访达</code> &gt; <code>应用程序</code> &gt; <code>实用工具</code> &gt; <code>终端</code></li> <li><strong>Linux</strong>: <code>Ctrl</code> + <code>Alt</code> + <code>T</code></li></ul></div> <h2 id="hashgard账户"><a href="#hashgard账户" aria-hidden="true" class="header-anchor">#</a> Hashgard账户</h2> <p>每个 Hashgard 账户的核心基础是一个包含24个词的助记词组，通过这个助记词可以生成无数个 Hashgard 账户，
+例如，一组私钥/公钥对。这被称为一个硬件钱包（跟多硬件钱包相关说明请参见<a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" target="_blank" rel="noopener noreferrer">BIP32<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>）</p> <div class="language- extra-class"><pre class="language-text"><code>        账户 0                            账户 1                              账户 2
+
++------------------+              +------------------+               +------------------+
+|                  |              |                  |               |                  |
+|       地址 0      |              |      地址 1      |               |       地址 2      |
+|        ^         |              |        ^         |               |        ^         |
+|        |         |              |        |         |               |        |         |
+|        |         |              |        |         |               |        |         |
+|        |         |              |        |         |               |        |         |
+|        +         |              |        +         |               |        +         |
+|       公钥 0      |              |      公钥 1      |               |       公钥 2      |
+|        ^         |              |        ^         |               |        ^         |
+|        |         |              |        |         |               |        |         |
+|        |         |              |        |         |               |        |         |
+|        |         |              |        |         |               |        |         |
+|        +         |              |        +         |               |        +         |
+|       私钥 0      |              |      私钥 1      |               |       私钥 2      |
+|        ^         |              |        ^         |               |        ^         |
++------------------+              +------------------+               +------------------+
+         |                                 |                                  |
+         |                                 |                                  |
+         |                                 |                                  |
+         +--------------------------------------------------------------------+
+                                           |
+                                           |
+                                 +---------+---------+
+                                 |                   |
+                                 |  助记词 (Seed)     |
+                                 |                   |
+                                 +-------------------+
+</code></pre></div><p>私钥是控制一个账户中所存资产的钥匙。私钥是通过助记词单向产生的。如果您不小心丢失了私钥，你可以通过助记词恢复。
+然而，如果你丢失了助记词，那么你就有可能失去对由这个助记词产生的所有私钥的控制。
+同样，如果有人获得了你的助记词，他们就可以操作所有相关账户。</p> <p>::: 警告</p> <p><strong>谨慎保管并不要告诉他人你的助记词。 为了防止资产被盗或者丢失，您最好多备份几份助记词，
+并且把它们存放在只有您知道的安全地方，这样做将有助于保障您的私钥以及相关账户的安全。</strong>
+:::</p> <p>Hashgard 地址是一个以可读词开头的字符串(比如<code>gard10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg</code>)
+如果有人想给你转账通证，他们就往这个地址转账。根据给定地址来推算私钥是不可行的。</p> <h3 id="创建一个账户"><a href="#创建一个账户" aria-hidden="true" class="header-anchor">#</a> 创建一个账户</h3> <p>前，您需要先安装<code>hashgardcli</code>，同时，您需要知道你希望在哪里保存和使用您的私钥。
+最好的办法是把他们保存在一台没有上网的电脑或者一个硬件钱包设备里面。
+将私钥保存在一台联网的电脑里面比较危险，任何人通过网络攻击都有可能获取您的私钥，进而盗取您的资产。</p> <h4 id="使用电脑进行操作"><a href="#使用电脑进行操作" aria-hidden="true" class="header-anchor">#</a> 使用电脑进行操作</h4> <p>::: 警告</p> <p><strong>注意：在一台没有联网的电脑上操作会更加安全</strong>
+:::</p> <p>然后，通过以下命令创建账户：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli keys <span class="token function">add</span> <span class="token operator">&lt;</span>yourKeyName<span class="token operator">&gt;</span>
+</code></pre></div><p>这个命令会产生一个24个词的助记词组，并且同时保存账户 <code>0</code> 的私钥和公钥。
+另外，您还需要输入一个密码来对您硬盘上账户<code>0</code>的私钥进行加密。
+每次您发出一笔交易时都将需要输入这个密码。如果您丢失了密码，您可以通过助记词来恢复您的私钥。</p> <p>::: 危险提示</p> <p><strong>千万不要丢失或者告诉其他人你的12个词的助记词组。
+为了防止资产被盗或者丢失，您最好多备份几份助记词，并且把它们存放在只有您知道的安全地方，
+如果有人取得您的助记词，那么他也就取得了您的私钥并且可以控制相关账户。</strong>
+:::</p> <p>::: 警告
+在确认已经安全保存好您的助记词以后（至少3遍！），你可以用如下命令清除终端窗口中的命令历史记录，以防有人通过历史记录获得您的助记词。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">history</span> -c
+<span class="token function">rm</span> ~/.bash_history
+</code></pre></div><p>:::</p> <p>你可以用以下命令使用助记词生成多个账户：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli keys <span class="token function">add</span> <span class="token operator">&lt;</span>yourKeyName<span class="token operator">&gt;</span> --recover --account <span class="token number">1</span>
+</code></pre></div><ul><li><ul><li><code>&lt;yourKeyName&gt;</code> 是账户名称，用来指代用助记词生成私钥/公钥对的 Hashgard 账户。
+在您发起交易时，这个账户名称用来识别您的账户。</li></ul></li> <li><p>您可以通过增加 <code>--account</code> 标志来指定您账户生成的路径 (<code>0</code>, <code>1</code>, <code>2</code>, ...)， <code>0</code> 是默认值。</p></li></ul> <p>这条命令需要您输入一个密码。改变账号就代表生成了一个新的账户。</p> <h2 id="访问hashgard网络"><a href="#访问hashgard网络" aria-hidden="true" class="header-anchor">#</a> 访问Hashgard网络</h2> <p>为了查询网络状态和发起交易，你需要通过自建一个全节点，或者连接到其他人的全节点访问 Hashgard 网络</p> <p>::: 警告</p> <p><strong>注意： 请不要与任何人分享您的助记词，您是唯一需要知道这些助记词的人。
+如果任何人通过邮件或者其他社交媒体向您要求您提供您的助记词，那就需要警惕了。
+请记住，Hashgard 团队，Hashgard 基金会永远不会通过邮件要求您提供您的账户密码或助记词。</strong>
+:::</p> <h3 id="运行您自己的全节点"><a href="#运行您自己的全节点" aria-hidden="true" class="header-anchor">#</a> 运行您自己的全节点</h3> <p>这是最安全的途径，但需要相当多的资源。您需要有较大的带宽和至少1TB的磁盘容量来运行一个全节点。</p> <p><code>hashgard</code>的安装教程在<a href="/github-pages/translations/cn/installation.html">这里</a>， 如何运行一个全节点指导在<a href="/github-pages/translations/cn/join-testnet.html">这里</a></p> <h3 id="连接到一个远程全节点"><a href="#连接到一个远程全节点" aria-hidden="true" class="header-anchor">#</a> 连接到一个远程全节点</h3> <p>如果您不想或没有能力运行一个全节点，您也可以连接到其他人的全节点。
+您需要谨慎的选择一个可信的运营商，因为恶意的运营商往往会向您反馈错误的查询结果，或者对您的交易进行监控。
+然而，他们永远也无法盗取您的资产，因为您的私钥仅保持在您的本地计算机或者钱包设备中。
+验证人，钱包供应商或者交易所是可以提供全节点的运营商。</p> <p>连接到其他人提供的全节点，你需要一个全节点地址，如<code>https://77.87.106.33:26657</code>。
+这个地址是您的供应商提供的一个可信的接入地址。你会在下一节中用到这个地址。</p> <h2 id="设置-hashgardcli"><a href="#设置-hashgardcli" aria-hidden="true" class="header-anchor">#</a> 设置 <code>hashgardcli</code></h2> <p>::: 提示</p> <p><strong>在开始设置 <code>hashgardcli</code>前，请确认你已经可以<a href="#%E8%AE%BF%E9%97%AEHashgard%E7%BD%91%E7%BB%9C">访问Hashgard网络</a></strong>
+:::</p> <p>::: 警告</p> <p><strong>请确认您使用的<code>hashgardcli</code>是最新的稳定版本</strong>
+:::</p> <p>无论您是否在自己运行一个节点，<code>hashgardcli</code> 都可以帮您实现与 Hashgard 网络的交互。让我们来完成对它的配置。</p> <p>您需要用下面的命令行完成对<code>hashgardcli</code>的配置：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli config <span class="token operator">&lt;</span>flag<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>
+</code></pre></div><p>此命名允许您为每个参数设置默认值。</p> <p>首先，设置你想要访问的全节点的地址：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli config node <span class="token operator">&lt;</span>host<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>port
+
+// 样例: hashgardcli config node https://77.87.106.33:26657
+</code></pre></div><p>如果你是自己运行全节点，可以使用 <code>tcp://localhost:26657</code> 作为地址。</p> <p>然后，让我们设置 <code>--trust-node</code> 指标的默认值。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli config trust-node <span class="token boolean">false</span>
+
+// Set to <span class="token boolean">true</span> <span class="token keyword">if</span> you run a light-client node, <span class="token boolean">false</span> otherwise
+</code></pre></div><p>最后，让我们设置需要访问区块链的 <code>chain-id</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli config chain-id sif-7000
+</code></pre></div><h2 id="状态查询"><a href="#状态查询" aria-hidden="true" class="header-anchor">#</a> 状态查询</h2> <p>::: 提示
+** 准备抵押 GARD 通证和取回奖励前，需要先完成 <a href="#%E8%AE%BE%E7%BD%AE-hashgardcli"><code>hashgardcli</code> 配置</a>**
+:::</p> <p><code>hashgardcli</code> 可以帮助您获得所有区块链的相关信息， 比如账户余额，抵押通证数量，奖励，治理提案以及其他信息。
+下面是一组用于委托操作的命令</p> <div class="language-bash extra-class"><pre class="language-bash"><code>
+// 查询账户余额或者其他账户相关信息
+hashgardcli query account
+
+
+// 查询验证人列表
+hashgardcli query staking validators
+
+
+// 查询指定地址的验证人的信息<span class="token punctuation">(</span>e.g. gardvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27<span class="token punctuation">)</span>
+hashgardcli query staking validator <span class="token operator">&lt;</span>validatorAddress<span class="token operator">&gt;</span>
+
+
+//查询指定地址的验证人相关的所有委托信息 <span class="token punctuation">(</span>e.g. gard10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg<span class="token punctuation">)</span>
+hashgardcli query staking delegations <span class="token operator">&lt;</span>delegatorAddress<span class="token operator">&gt;</span>
+
+// 查询从一个指定地址的委托人<span class="token punctuation">(</span>e.g. gard10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg<span class="token punctuation">)</span>和一个指定地址的验证人<span class="token punctuation">(</span>e.g. gardvaloper1n5pepvmgsfd3p2tqqgvt505jvymmstf6s9gw27<span class="token punctuation">)</span> 之间的委托交易
+hashgardcli query staking delegation <span class="token operator">&lt;</span>delegatorAddress<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>validatorAddress<span class="token operator">&gt;</span>
+
+// 查询一个指定地址的委托人<span class="token punctuation">(</span>e.g. gard10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg<span class="token punctuation">)</span>所能获得的奖励情况
+hashgardcli query distribution rewards <span class="token operator">&lt;</span>delegatorAddress<span class="token operator">&gt;</span> 
+
+// 查询所有现在正等待抵押的提案
+hashgardcli query gov proposals --status deposit_period
+
+//查询所有现在正等待投票的填
+hashgardcli query gov proposals --status voting_period
+
+// 查询一个指定propsalID的提案信息
+hashgardcli query gov proposal <span class="token operator">&lt;</span>proposalID<span class="token operator">&gt;</span>
+</code></pre></div><p>需要了解跟多的命令，只需要用：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli query
+</code></pre></div><p>对于每条命令，您都可以使用<code>-h</code> 或 <code>--help</code> 参数来获得更多的信息。</p> <h2 id="发起交易"><a href="#发起交易" aria-hidden="true" class="header-anchor">#</a> 发起交易</h2> <h3 id="关于gas费和手续费"><a href="#关于gas费和手续费" aria-hidden="true" class="header-anchor">#</a> 关于gas费和手续费</h3> <p>Hashgard 网络上的交易在被执行时需要支付手续费。这个手续费是用于支付执行交易所需的gas。计算公式如下：</p> <div class="language- extra-class"><pre class="language-text"><code>fees = gas * gasPrices
+</code></pre></div><p><code>gas</code> 的多少取决于交易类型，不同的交易类型会收取不同的 <code>gas</code> 。每个交易的 <code>gas</code> 费是在实际执行过程中计算的，
+但我们可以通过设置 <code>gas</code> 参数中的 <code>auto</code> 值实现在交易前对 <code>gas</code> 费的估算，但这只是一个粗略的估计，
+你可以通过 <code>--gas-adjustment</code> (缺省值 <code>1.0</code>) 对预估的<code>gas</code> 值进行调节，以确保为交易支付足够的<code>gas</code> 。</p> <p><code>gasPrice</code> 用于设置单位 <code>gas</code> 的价格。每个验证人会设置一个最低gas价<code>min-gas-price</code>,
+并只会将<code>gasPrice</code>大于<code>min-gas-price</code>的交易打包。</p> <p>交易的<code>fees</code> 是<code>gas</code> 和 <code>gasPrice</code>的乘积。作为一个用户，你需要输入3个参数中至少2个，
+<code>gasPrice</code>/<code>fees</code>的值越大，您的交易就越有机会被打包执行。</p> <h3 id="抵押atom通证-提取奖励"><a href="#抵押atom通证-提取奖励" aria-hidden="true" class="header-anchor">#</a> 抵押Atom通证 &amp; 提取奖励</h3> <p>::: 提示
+<strong>在您抵押通证或取回奖励之前，您需要完成<a href="#%E8%AE%BE%E7%BD%AE-hashgardcli"><code>hashgardcli</code> 设置</a>
+和 <a href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%B4%A6%E6%88%B7">创建账户</a></strong>
+:::</p> <p>::: 警告
+<strong>注意：执行以下命令需要在一台联网的计算机。用一个硬件钱包设备执行这些命令会更安全。
+关于离线交易过程请看<a href="#%E4%BB%8E%E4%B8%80%E5%8F%B0%E7%A6%BB%E7%BA%BF%E7%94%B5%E8%84%91%E4%B8%8A%E7%AD%BE%E7%BD%B2%E4%BA%A4%E6%98%93">这里</a>.</strong>
+:::</p> <div class="language-bash extra-class"><pre class="language-bash"><code>// 向指定验证人绑定一定数量的Atom通证
+// 参数设定样例: <span class="token operator">&lt;</span>validatorAddress<span class="token operator">&gt;</span><span class="token operator">=</span>gardvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <span class="token operator">&lt;</span>amountToBound<span class="token operator">&gt;</span><span class="token operator">=</span>10000000000gard, <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span><span class="token operator">=</span>1000gard
+
+hashgardcli tx staking delegate <span class="token operator">&lt;</span>validatorAddress<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>amountToBond<span class="token operator">&gt;</span> --from <span class="token operator">&lt;</span>delegatorKeyName<span class="token operator">&gt;</span> --gas auto --gas-prices <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span>
+
+
+// 提取所有的奖励
+// 参数设定样例: <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span><span class="token operator">=</span>1000gard
+
+hashgardcli tx distribution withdraw-all-rewards --from <span class="token operator">&lt;</span>delegatorKeyName<span class="token operator">&gt;</span> --gas auto --gas-prices <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span>
+
+
+// 向指定验证人申请解绑一定数量的Atom通证
+// 解绑的通证需要3周后才能完全解绑并可以交易，
+// 参数设定样例: <span class="token operator">&lt;</span>validatorAddress<span class="token operator">&gt;</span><span class="token operator">=</span>gardvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <span class="token operator">&lt;</span>amountToUnbound<span class="token operator">&gt;</span><span class="token operator">=</span>10000000000gard, <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span><span class="token operator">=</span>1000gard
+
+hashgardcli tx staking unbond <span class="token operator">&lt;</span>validatorAddress<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>amountToUnbond<span class="token operator">&gt;</span> --from <span class="token operator">&lt;</span>delegatorKeyName<span class="token operator">&gt;</span> --gas auto --gas-prices <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span>
+</code></pre></div><p>::: 提示
+:::
+如果您是使用一个联网的钱包设备，在交易被广播到网络前您需要在设备上确认交易。</p> <p>确认您的交易已经发出，可以用以下查询：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>// 您的账户余额在您抵押Atom通证或者取回奖励后会发生变化
+hashgardcli query account
+
+// 您在抵押后应该能查到委托交易
+hashgardcli query staking delegations <span class="token operator">&lt;</span>delegatorAddress<span class="token operator">&gt;</span>
+
+// 如果交易已经被打包，将会返回交易记录（tx）
+// 在以下查询命令中可以使用显示的交易哈希值作为参数
+hashgardcli query tx <span class="token operator">&lt;</span>txHash<span class="token operator">&gt;</span>
+
+</code></pre></div><p>如果您是连接到一个可信全节点的话，您可以通过一个区块链浏览器做检查。</p> <h2 id="参与链上治理"><a href="#参与链上治理" aria-hidden="true" class="header-anchor">#</a> 参与链上治理</h2> <h4 id="链上治理入门"><a href="#链上治理入门" aria-hidden="true" class="header-anchor">#</a> 链上治理入门</h4> <p>Hashgard 有一个内建的治理系统，该系统允许抵押通证的持有人参与提案投票。系统现在支持3种提案类型：</p> <ul><li><code>Text Proposals</code>: 这是最基本的一种提案类型，通常用于获得大家对某个网络治理意见的观点。</li> <li><code>Parameter Proposals</code>: 这种提案通常用于改变网络参数的设定。</li> <li><code>Software Upgrade Proposal</code>: 这个提案用于升级 Hashgard 的软件。</li></ul> <p>任何 GARD 通证的持有人都能够提交一个提案。为了让一个提案获准公开投票，提议人必须要抵押一定量的通证 <code>deposit</code>，
+且抵押值必须大于 <code>minDeposit</code> 参数设定值. 提案的抵押不需要提案人一次全部交付。
+如果早期提案人交付的 <code>deposit</code> 不足，那么提案进入 <code>deposit_period</code> 状态。
+此后，任何通证持有人可以通过 <code>depositTx</code> 交易增加对提案的抵押。</p> <p>当<code>deposit</code> 达到 <code>minDeposit</code>，提案进入2周的 <code>voting_period</code> 。
+任何<strong>抵押了通证</strong>的持有人都可以参与对这个提案的投票。
+投票的选项有<code>Yes</code>, <code>No</code>, <code>NoWithVeto</code> 和 <code>Abstain</code>。
+投票的权重取决于投票人所抵押的通证数量。如果通证持有人不投票，那么委托人将继承其委托的验证人的投票选项。
+当然，委托人也可以自己投出与所委托验证人不同的票。</p> <p>当投票期结束后，获得50%（不包括投<code>Abstain</code>票）以上 <code>Yes</code> 投票权重且少于33.33% 的
+<code>NoWithVeto</code>（不包括投<code>Abstain</code>票）提案将被接受。</p> <h4 id="实践练习"><a href="#实践练习" aria-hidden="true" class="header-anchor">#</a> 实践练习</h4> <p>::: 提示
+<strong>在您能够抵押通证或者提取奖励以前，您需要了解<a href="#%E6%8A%B5%E6%8A%BCGARD%E9%80%9A%E8%AF%81--%E6%8F%90%E5%8F%96%E5%A5%96%E5%8A%B1">通证抵押</a></strong>
+:::</p> <p>::: 警告</p> <p><strong>注意：执行以下命令需要一台联网的计算机。用一个硬件钱包设备执行这些命令会更安全。
+关于离线交易过程请看<a href="#%E4%BB%8E%E4%B8%80%E5%8F%B0%E7%A6%BB%E7%BA%BF%E7%94%B5%E8%84%91%E4%B8%8A%E7%AD%BE%E7%BD%B2%E4%BA%A4%E6%98%93">这里</a>.</strong>
+:::</p> <div class="language-bash extra-class"><pre class="language-bash"><code>// 提交一个提案
+// <span class="token operator">&lt;</span>type<span class="token operator">&gt;</span><span class="token operator">=</span>text/parameter_change/software_upgrade
+// ex value <span class="token keyword">for</span> flag: <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span><span class="token operator">=</span>100gard
+
+hashgardcli tx gov submit-proposal --title <span class="token string">&quot;Test Proposal&quot;</span> --description <span class="token string">&quot;My awesome proposal&quot;</span> --type <span class="token operator">&lt;</span>type<span class="token operator">&gt;</span> --deposit<span class="token operator">=</span>10000000gard --gas auto --gas-prices <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span> --from <span class="token operator">&lt;</span>delegatorKeyName<span class="token operator">&gt;</span>
+
+// 增加对提案的抵押
+// Retrieve proposalID from <span class="token variable">$hashgardcli</span> query gov proposals --status deposit_period
+// 通过 <span class="token variable">$hashgardcli</span> query gov proposals --status deposit_period 命令获得 <span class="token variable"><span class="token variable">`</span>proposalID<span class="token variable">`</span></span> 
+// 参数设定样例: <span class="token operator">&lt;</span>deposit<span class="token operator">&gt;</span><span class="token operator">=</span>1000000gard
+
+hashgardcli tx gov deposit <span class="token operator">&lt;</span>proposalID<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>deposit<span class="token operator">&gt;</span> --gas auto --gas-prices <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span> --from <span class="token operator">&lt;</span>delegatorKeyName<span class="token operator">&gt;</span>
+
+// 对一个提案投票
+// Retrieve proposalID from <span class="token variable">$hashgardcli</span> query gov proposals --status voting_period 
+通过 <span class="token variable">$hashgardcli</span> query gov proposals --status deposit_period 命令获得 <span class="token variable"><span class="token variable">`</span>proposalID<span class="token variable">`</span></span> 
+// <span class="token operator">&lt;</span>option<span class="token operator">&gt;</span><span class="token operator">=</span>yes/no/no_with_veto/abstain
+
+hashgardcli tx gov vote <span class="token operator">&lt;</span>proposalID<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>option<span class="token operator">&gt;</span> --gas auto --gas-prices <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span> --from <span class="token operator">&lt;</span>delegatorKeyName<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="从一台离线电脑上签署交易"><a href="#从一台离线电脑上签署交易" aria-hidden="true" class="header-anchor">#</a> 从一台离线电脑上签署交易</h3> <p>如果你没有数字钱包设备，而且希望和一台存有私钥的没有联网的电脑进行交互，你可以使用如下过程。
+首先，在<strong>联网的电脑上</strong>生成一个没有签名的交易，然后通过下列命令操作（下面以抵押交易为例）：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>// 抵押Atom通证
+// 参数设定样例: <span class="token operator">&lt;</span>amountToBound<span class="token operator">&gt;</span><span class="token operator">=</span>10000000000gard, <span class="token operator">&lt;</span>bech32AddressOfValidator<span class="token operator">&gt;</span><span class="token operator">=</span>gardvaloper18thamkhnj9wz8pa4nhnp9rldprgant57pk2m8s, <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span><span class="token operator">=</span>1000gard
+
+hashgardcli tx staking delegate <span class="token operator">&lt;</span>validatorAddress<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>amountToBond<span class="token operator">&gt;</span> --from <span class="token operator">&lt;</span>delegatorKeyName<span class="token operator">&gt;</span> --gas auto --gas-prices <span class="token operator">&lt;</span>gasPrice<span class="token operator">&gt;</span> --generate-only <span class="token operator">&gt;</span> unsignedTX.json
+</code></pre></div><p>然后，复制 <code>unsignedTx.json</code> 并且帮它转移到没有联网的电脑上（比如通过U盘）。
+如果没有在没联网的电脑上建立账户，可先<a href="#%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%AE%BE%E5%A4%87%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C">在没有联网的电脑上建立账户</a>。
+为了进一步保障安全，你可以在签署交易前用以下命令对参数进行检查。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cat</span> unsignedTx.json
+</code></pre></div><p>现在，通过以下命令对交易签名：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli tx sign unsignedTx.json --from-addr <span class="token operator">&lt;</span>delegatorAddr<span class="token operator">&gt;&gt;</span> signedTx.json
+</code></pre></div><p>复制 <code>signedTx.json</code> 并转移回联网的那台电脑。最后，用以下命令向网络广播交易。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hashgardcli tx broadcast signedTx.json
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">9/26/2019, 6:20:52 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/github-pages/translations/cn/validators/overview.html" class="prev">
+          验证人节点指南
+        </a></span> <span class="next"><a href="/github-pages/translations/cn/hashgardcli.html">
+          Hasghard CLI 命令
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/github-pages/assets/js/app.bf5dd73f.js" defer></script><script src="/github-pages/assets/js/24.2dfe9c4e.js" defer></script>
+  </body>
+</html>
